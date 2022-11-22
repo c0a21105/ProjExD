@@ -58,7 +58,7 @@ if __name__ == "__main__":
             break
         else:
             if MAX_CONT <= cont_n:
-                print("残念！クリアできず・・・")
+                print("残念！クリアできず・・・\n諦めないで！！！！")
                 break
             print("-"*20)
             print("不正解！もう一度チャレンジしてね！")
