@@ -2,8 +2,8 @@ from random import sample
 from random import randint
 from datetime import datetime
 
-chr_q = 10
-max_cont = 5
+CHR_Q = 10
+MAX_CONT = 5
 cont_n = 0
 
 def play():
@@ -17,7 +17,7 @@ def play():
 
 def alp_gen():
     alp_lst = [chr(ord("A")+i) for i in range(26)]
-    return sample(alp_lst, 10)
+    return sample(alp_lst, CHR_Q)
 
 def ask():
     print("対象文字：")
@@ -51,17 +51,17 @@ def ans():
 
 if __name__ == "__main__":
     st = datetime.now()
-    for i in range(max_cont):
+    for i in range(MAX_CONT):
         ret = play()
         cont_n += 1
         if ret:
             break
         else:
-            if max_cont <= cont_n:
+            if MAX_CONT <= cont_n:
                 print("残念！クリアできず・・・")
                 break
             print("-"*20)
             print("不正解！もう一度チャレンジしてね！")
-            print(f"残りコンティニュー回数：{max_cont-cont_n} 回")
+            print(f"残りコンティニュー回数：{MAX_CONT-cont_n} 回")
             print("-"*20)
             continue
