@@ -41,7 +41,7 @@ def main_proc():
         mx -= 1
     cx = mx*100+50
     cy = my*100+50
-    canvas.coords("koukaton", cx, cy)
+    canvas.coords(image_id, cx, cy)
 
     print(mx, my, key, jid)
     jid = root.after(100, main_proc)
@@ -63,7 +63,7 @@ def game_clear():
         root.destroy()
 
 def reset():
-    global mx, my, key, jid, count, maze, label, label2, image
+    global mx, my, key, jid, count, maze, label, label2, image, image_id
 
     image = tk.PhotoImage(file="fig/2.png")
 
@@ -83,7 +83,7 @@ def reset():
     my = 1
     cx = mx*100+50
     cy = my*100+50
-    canvas.create_image(cx, cy, image=image, tag="koukaton")
+    image_id = canvas.create_image(cx, cy, image=image, tag="koukaton")
 
     key = ""
     jid = None
