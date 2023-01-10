@@ -347,8 +347,6 @@ def main():
     EnemyEvent = pg.USEREVENT + 1
     #3秒ごとに行うようにタイマーをセット
     pg.time.set_timer(EnemyEvent, 3000)
-    #敵の数
-    enemy_sum = 0
     
     crash_time = time.time()
     
